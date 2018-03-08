@@ -1,0 +1,44 @@
+{
+	"name": "closest-css-color",
+	"description": "Find the closest CSS color keyword for a given HEX color value.",
+	"version": "0.0.0",
+	"keywords": [
+		"hex",
+		"rgb",
+		"css",
+		"css3",
+		"color",
+		"colour",
+		"keyword",
+		"colors",
+		"colours",
+		"close",
+		"closest"
+	],
+	"author": "Julius Tens <mail@juliustens.eu>",
+	"homepage": "https://github.com/juliuste/closest-css-color",
+	"repository": "juliuste/closest-css-color",
+	"bugs": "https://github.com/juliuste/closest-css-color/issues",
+	"main": "./index.js",
+	"files": ["index.js"],
+	"dependencies": {
+		"css-color-names": "0.0.4",
+		"hex-rgb": "^2.0.0",
+		"lodash.merge": "^4.6.1",
+		"lodash.pick": "^4.4.0",
+		"lodash.sortby": "^4.7.0"
+	},
+	"devDependencies": {
+		"lodash.isequal": "^4.5.0",
+		"lodash.isobject": "^3.0.2",
+		"tape": "^4.9.0"
+	},
+	"scripts": {
+		"test": "node test.js",
+		"prepare": "npm test"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"license": "ISC"
+}
