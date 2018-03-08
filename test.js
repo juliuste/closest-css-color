@@ -24,7 +24,6 @@ tape('closest-css-color', (t) => {
 	t.ok(isObject(color3), '#1019a6')
 	t.ok(color3.name === 'darkblue', '#1019a6')
 	t.ok(color3.hex === '#00008b', '#1019a6')
-	t.ok(isEqual(color3.rgb, {red: 0, green: 0, blue: 139}), '#1019a6')
 
 	for(let color of Object.keys(filteredColors)){
 		t.ok(closest(filteredColors[color]) === color, color)
