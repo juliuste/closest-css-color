@@ -5,12 +5,16 @@ const hex2rgb = require('hex-rgb')
 const sortBy = require('lodash.sortby')
 const merge = require('lodash.merge')
 const pick = require('lodash.pick')
+const uniqBy = require('lodash.uniqby')
+
+const uniqColorKeys = uniqBy(Object.keys(cssColors), c => cssColors[c])
+const filteredColors = pick(cssColors, uniqColorKeys)
 
 const colors = sortBy(
-    Object.keys(cssColors).map(name => ({
+    Object.keys(filteredColors).map(name => ({
         name,
-        hex: cssColors[name],
-        rgb: pick(hex2rgb(cssColors[name]), ['red', 'green', 'blue'])
+        hex: filteredColors[name],
+        rgb: pick(hex2rgb(filteredColors[name]), ['red', 'green', 'blue'])
     })),
     c => c.hex
 )
