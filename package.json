@@ -25,7 +25,7 @@
 	],
 	"dependencies": {
 		"colour-proximity": "0.0.2",
-		"css-color-names": "0.0.4",
+		"css-color-names": "1.0.0",
 		"hex-rgb": "^3.0.0",
 		"lodash.merge": "^4.6.1",
 		"lodash.pick": "^4.4.0",
