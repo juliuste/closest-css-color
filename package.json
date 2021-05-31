@@ -1,6 +1,6 @@
 {
 	"name": "closest-css-color",
-	"version": "0.1.1",
+	"version": "1.0.0",
 	"description": "Find the closest CSS color keyword for a given HEX color value.",
 	"keywords": [
 		"hex",
