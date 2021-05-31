@@ -1,7 +1,7 @@
 {
 	"name": "closest-css-color",
-	"description": "Find the closest CSS color keyword for a given HEX color value.",
 	"version": "0.1.1",
+	"description": "Find the closest CSS color keyword for a given HEX color value.",
 	"keywords": [
 		"hex",
 		"rgb",
@@ -13,36 +13,40 @@
 		"colors",
 		"colours",
 		"close",
-		"closest"
+		"closest",
+		"similar"
 	],
-	"author": "Julius Tens <mail@juliustens.eu>",
 	"homepage": "https://github.com/juliuste/closest-css-color",
-	"repository": "juliuste/closest-css-color",
 	"bugs": "https://github.com/juliuste/closest-css-color/issues",
+	"repository": "juliuste/closest-css-color",
+	"license": "ISC",
+	"author": "Julius Tens <mail@juliustens.eu>",
 	"main": "./index.js",
 	"files": [
 		"index.js"
 	],
+	"scripts": {
+		"test": "npm run lint && npm run check-deps && node test",
+		"check-deps": "depcheck",
+		"lint": "eslint index.js test.js",
+		"fix": "npm run lint -- --fix",
+		"prepublishOnly": "npm test"
+	},
 	"dependencies": {
 		"colour-proximity": "0.0.2",
-		"css-color-names": "0.0.4",
-		"hex-rgb": "^3.0.0",
-		"lodash.merge": "^4.6.1",
-		"lodash.pick": "^4.4.0",
-		"lodash.sortby": "^4.7.0",
-		"lodash.uniqby": "^4.7.0"
+		"css-color-names": "1.0.1",
+		"lodash": "^4.17.21"
 	},
 	"devDependencies": {
-		"lodash.isequal": "^4.5.0",
-		"lodash.isobject": "^3.0.2",
-		"tape": "^4.9.0"
-	},
-	"scripts": {
-		"test": "node test.js",
-		"prepare": "npm test"
+		"depcheck": "^1.4.1",
+		"eslint": "^7.27.0",
+		"eslint-config-standard": "^16.0.3",
+		"eslint-plugin-import": "^2.23.4",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^5.1.0",
+		"tape": "^5.2.2"
 	},
 	"engines": {
-		"node": ">=8"
-	},
-	"license": "ISC"
+		"node": ">=14"
+	}
 }
